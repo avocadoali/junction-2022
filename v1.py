@@ -122,7 +122,8 @@ class PCSCReader(Reader):
 if __name__ == '__main__':
     from smartcard.util import *
 
-    msg = toBytes("00A4040007A000000003101000")
+    select = toBytes("00A4040007A000000003101000")
+    read_record = toBytes("00B200041")
 
     creaders = PCSCReader.readers()
     for reader in creaders:
@@ -131,7 +132,16 @@ if __name__ == '__main__':
             connection = reader.createConnection()
             connection.connect()
             print(toHexString(connection.getATR()))
-            data, sw1, sw2 = connection.transmit(msg)
-            print("{:02X} {:02X}".format(sw1, sw2))
+
+            while True:
+
+                comm = toBytes(input(">> "))
+                if(comm==[]): break
+                data, sw1, sw2 = connection.transmit(comm)
+                print("<< {:02X} {:02X}".format(sw1, sw2))
+                print("<< "+str(data))
+                print("<< "+str(list(map(chr,data))))
+                print()
+
         except NoCardException:
             print('no card in reader')
