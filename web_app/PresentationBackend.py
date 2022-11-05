@@ -2,16 +2,24 @@ from smartcard.Exceptions import NoCardException
 from smartcard.pcsc.PCSCReader import *
 from smartcard.util import toBytes
 
-def toHexString(bytes):
-    return " ".join(["%02X" % b for b in bytes])
+from parseATR import toHexString
+
 
 def calcSFI(n):
     return (n << 3) | 4
 
 
 def identifyCountry(num):
-    if int(num) == 246:
-        return "The Republic of Finland"
+    num = 5
+    countries = {
+        246: "The Republic of Finland",
+        276: "Germany",
+        840: "United States of America",
+        826: "United Kingdom of Great Britain and Northern Ireland"
+    }
+
+    if num in countries:
+        return countries[num]
     return "ISO country code: " + num
 
 
@@ -113,17 +121,21 @@ def cardDemo():
             # select PAYAPP
             data, sw1, sw2 = connection.transmit(SELECT + APP + PAYAID + NUL)
 
-            # read name and card number
-            record = 1
-            sfi = calcSFI(1)
-            data, sw1, sw2 = connection.transmit(GET + [record] + [sfi] + NUL)  # get record length
-            data, sw1, sw2 = connection.transmit(GET + [record] + [sfi] + [sw2])  # read record
+            # read card data
+            card = []
+            for i in range(1, 32):
+                sfi = calcSFI(i)
+                for record in range(1, 17):
+                    data, sw1, sw2 = connection.transmit(GET + [record] + [sfi] + NUL)  # get record length
+                    data, sw1, sw2 = connection.transmit(GET + [record] + [sfi] + [sw2])  # read record
+                    if sw1 == 144 and sw2 == 0:  # read was successful
+                        card += data
 
-            number = toHexString(findDataOfLen("0x57", data, 8))  # card number
-            
-            out["number"] = number
+            number = toHexString(findDataOfLen("0x57", card, 8)).split()  # card number
+            out["number"] = number[0] + number[1] + " " + number[2] + number[3] + " " + number[4] + number[5] + " " + \
+                            number[6] + number[7]
 
-            nameBytes = findData2("0x5F20", data)  # card hoder name
+            nameBytes = findData2("0x5F20", card)  # card hoder name
 
             name = ""
             for i in nameBytes:
@@ -131,32 +143,26 @@ def cardDemo():
             out["name"] = name
 
             # read date of issue and expiration date
-            sfi = calcSFI(3)
-            record = 1
-            data, sw1, sw2 = connection.transmit(GET + [record] + [sfi] + NUL)  # get record length
-            data, sw1, sw2 = connection.transmit(GET + [record] + [sfi] + [sw2])  # read record
 
-            date = toDateString(findData2("0x5F25", data))  # date of issue
+            date = toDateString(findData2("0x5F25", card))  # date of issue
             out["effectiveDate"] = date
 
-            date = toDateString(findData2("0x5F24", data))  # expiration date
+            date = toDateString(findData2("0x5F24", card))  # expiration date
             out["expirationDate"] = date
 
             # read the country code
 
-            countryBytes = toHexString(findData2("0x5F28", data)).split()
+            countryBytes = toHexString(findData2("0x5F28", card)).split()
             countryCode = countryBytes[0] + countryBytes[1]
             out["country"] = identifyCountry(countryCode)  # issuing country
 
             # read the default currency
-            record = 2
-            data, sw1, sw2 = connection.transmit(GET + [record] + [sfi] + NUL)  # get record length
-            data, sw1, sw2 = connection.transmit(GET + [record] + [sfi] + [sw2])  # read record
 
-            currencyCode = toHexString(findData2("0x9F42", data)).split()
+            currencyCode = toHexString(findData2("0x9F42", card)).split()
             out["currency"] = identifyCurrency(currencyCode[0] + currencyCode[1])
 
             # read payment log
+            # only works on visa debit
             sfi = calcSFI(11)
             for record in range(1, 100):
                 data, sw1, sw2 = connection.transmit(GET + [record] + [sfi] + NUL)  # get record length
@@ -174,4 +180,5 @@ def cardDemo():
             print("!>> no Card inserted\n")
 
 
-print(cardDemo())
+res = cardDemo()
+print(res)
