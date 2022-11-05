@@ -85,10 +85,10 @@ class PCSCReader(Reader):
             raise EstablishContextException(hresult)
         try:
             hresult = SCardRemoveReaderFromGroup(hcontext, self.name,
-                groupname)
+                                                 groupname)
             if 0 != hresult:
                 raise RemoveReaderFromGroupException(hresult, self.name,
-                    groupname)
+                                                     groupname)
         finally:
             hresult = SCardReleaseContext(hcontext)
             if 0 != hresult:
@@ -102,6 +102,7 @@ class PCSCReader(Reader):
 
         def create(readername):
             return PCSCReader(readername)
+
         create = staticmethod(create)
 
     def readers(groups=[]):
@@ -117,31 +118,32 @@ class PCSCReader(Reader):
         for reader in pcsc_readers:
             creaders.append(PCSCReader.Factory.create(reader))
         return creaders
+
     readers = staticmethod(readers)
+
 
 if __name__ == '__main__':
     from smartcard.util import *
 
-    select = toBytes("00A4040007A000000003101000")
+    select = toBytes("00A40400 07A000000003101000")
     read_record = toBytes("00B200041")
 
     creaders = PCSCReader.readers()
     for reader in creaders:
-        try:
-            print(reader.name)
-            connection = reader.createConnection()
-            connection.connect()
-            print(toHexString(connection.getATR()))
+        print(reader.name)
+        connection = reader.createConnection()
+        connection.connect()
+        print(toHexString(connection.getATR()))
 
-            while True:
+        while True:
 
-                comm = toBytes(input(">> "))
-                if(comm==[]): break
-                data, sw1, sw2 = connection.transmit(comm)
-                print("<< {:02X} {:02X}".format(sw1, sw2))
-                print("<< "+str(data))
-                print("<< "+str(list(map(chr,data))))
-                print()
+            comm = toBytes(input(">> "))
+            if (comm == []): break
+            data, sw1, sw2 = connection.transmit(comm)
+            print("<< {:02X} {:02X}".format(sw1, sw2))
+            print("<< " + str(data))
+            print("<< " + str(list(map(chr, data))))
+            print()
 
-        except NoCardException:
-            print('no card in reader')
+# 00 A4 04 00 0E A0 00 00 00 03 10 10
+# 00A4040080A800000483025541

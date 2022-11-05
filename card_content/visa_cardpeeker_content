@@ -1,0 +1,1652 @@
+<?xml version="1.0" type="UTF-8"?>
+<cardpeek>
+  <version>0.8.4</version>
+  <node>
+    <attr name="classname">card</attr>
+    <attr name="label">EMV</attr>
+    <node>
+      <attr name="classname">atr</attr>
+      <attr name="label">cold ATR</attr>
+      <attr name="size">18</attr>
+      <attr name="val" encoding="bytes">8:3B6E000080318066B0840C016E0183009000</attr>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">Possibly identified card</attr>
+        <attr name="val">Optelio Cards (D72 R4 WR)
+  Nordea (a Skandinavian bank) eID card
+  http://linux.fi/wiki/Nordea_eID
+  RBC Royal Bank Client Card (bank in Canada)
+  Banco Santander TUI/USC R7
+  Gemalto Optelio/Desineo D72 (JavaCard) with WG10 and Maestro (JavaCard) (Bank)
+  Carte Ticket Restaurant with MasterCard
+  Citigold VISA Debit for Citibank, Australia
+  Platinum VISA card for Citibank, Australia
+  VISA Infinite issued by RBC Royal Bank (Canada)
+  http://www.rbc.com/
+  Postepay Evolution - Poste Italiane (mastercard)
+  &quot;la Caixa&quot; (Spain) (VISA Electron) debit card (Bank)
+  https://www.lacaixa.es/</attr>
+      </node>
+    </node>
+    <node>
+      <attr name="classname">application</attr>
+      <attr name="label">application</attr>
+      <attr name="id">#315041592E5359532E4444463031</attr>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">File Control Information (FCI) Template</attr>
+        <attr name="id">6F</attr>
+        <attr name="size">42</attr>
+        <node>
+          <attr name="classname">item</attr>
+          <attr name="label">Dedicated File (DF) Name</attr>
+          <attr name="id">84</attr>
+          <attr name="size">14</attr>
+          <attr name="val" encoding="bytes">8:315041592E5359532E4444463031</attr>
+          <attr name="alt">1PAY.SYS.DDF01</attr>
+        </node>
+        <node>
+          <attr name="classname">item</attr>
+          <attr name="label">FCI Proprietary Template</attr>
+          <attr name="id">A5</attr>
+          <attr name="size">24</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Short File Identifier (SFI)</attr>
+            <attr name="id">88</attr>
+            <attr name="size">1</attr>
+            <attr name="val" encoding="bytes">8:01</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Language Preference</attr>
+            <attr name="id">5F2D</attr>
+            <attr name="size">4</attr>
+            <attr name="val" encoding="bytes">8:6669656E</attr>
+            <attr name="alt">fien</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">FCI Issuer Discretionary Data</attr>
+            <attr name="id">BF0C</attr>
+            <attr name="size">11</attr>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">TLV (Private)</attr>
+              <attr name="id">DF02</attr>
+              <attr name="size">2</attr>
+              <attr name="val" encoding="bytes">8:0246</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">TLV (Private)</attr>
+              <attr name="id">DF47</attr>
+              <attr name="size">3</attr>
+              <attr name="val" encoding="bytes">8:800101</attr>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node>
+        <attr name="classname">file</attr>
+        <attr name="label">file</attr>
+        <attr name="id">1</attr>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">1</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Data File (ADF)</attr>
+            <attr name="id">70</attr>
+            <attr name="size">39</attr>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Application Template</attr>
+              <attr name="id">61</attr>
+              <attr name="size">37</attr>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Application Identifier (AID)</attr>
+                <attr name="id">4F</attr>
+                <attr name="size">7</attr>
+                <attr name="val" encoding="bytes">8:A0000000031010</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Application Label</attr>
+                <attr name="id">50</attr>
+                <attr name="size">10</attr>
+                <attr name="val" encoding="bytes">8:56495341204445424954</attr>
+                <attr name="alt">VISA DEBIT</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Application Priority Indicator</attr>
+                <attr name="id">87</attr>
+                <attr name="size">1</attr>
+                <attr name="val" encoding="bytes">8:01</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Discretionary DOs</attr>
+                <attr name="id">73</attr>
+                <attr name="size">11</attr>
+                <node>
+                  <attr name="classname">item</attr>
+                  <attr name="label">TLV (Context-specific)</attr>
+                  <attr name="id">9F0A</attr>
+                  <attr name="size">8</attr>
+                  <attr name="val" encoding="bytes">8:0001050100000000</attr>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">2</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Data File (ADF)</attr>
+            <attr name="id">70</attr>
+            <attr name="size">21</attr>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Application Template</attr>
+              <attr name="id">61</attr>
+              <attr name="size">19</attr>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Application Identifier (AID)</attr>
+                <attr name="id">4F</attr>
+                <attr name="size">7</attr>
+                <attr name="val" encoding="bytes">8:A0000003790000</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Application Label</attr>
+                <attr name="id">50</attr>
+                <attr name="size">5</attr>
+                <attr name="val" encoding="bytes">8:424F4E5553</attr>
+                <attr name="alt">BONUS</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Application Priority Indicator</attr>
+                <attr name="id">87</attr>
+                <attr name="size">1</attr>
+                <attr name="val" encoding="bytes">8:02</attr>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node>
+      <attr name="classname">application</attr>
+      <attr name="label">application</attr>
+      <attr name="id">#A0000000031010</attr>
+      <node>
+        <attr name="classname">header</attr>
+        <attr name="label">answer to select</attr>
+        <attr name="size">54</attr>
+        <attr name="val" encoding="bytes">8:6F348407A0000000031010A529500A564953412044454249548701015F2D046669656EBF0C109F4D020B0A9F0A080001050100000000</attr>
+        <node>
+          <attr name="classname">item</attr>
+          <attr name="label">File Control Information (FCI) Template</attr>
+          <attr name="id">6F</attr>
+          <attr name="size">52</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Dedicated File (DF) Name</attr>
+            <attr name="id">84</attr>
+            <attr name="size">7</attr>
+            <attr name="val" encoding="bytes">8:A0000000031010</attr>
+            <attr name="alt">\240\000\000\000\003\020\020 (A0000000031010)</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">FCI Proprietary Template</attr>
+            <attr name="id">A5</attr>
+            <attr name="size">41</attr>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Application Label</attr>
+              <attr name="id">50</attr>
+              <attr name="size">10</attr>
+              <attr name="val" encoding="bytes">8:56495341204445424954</attr>
+              <attr name="alt">VISA DEBIT</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Application Priority Indicator</attr>
+              <attr name="id">87</attr>
+              <attr name="size">1</attr>
+              <attr name="val" encoding="bytes">8:01</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Language Preference</attr>
+              <attr name="id">5F2D</attr>
+              <attr name="size">4</attr>
+              <attr name="val" encoding="bytes">8:6669656E</attr>
+              <attr name="alt">fien</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">FCI Issuer Discretionary Data</attr>
+              <attr name="id">BF0C</attr>
+              <attr name="size">16</attr>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Log Entry</attr>
+                <attr name="id">9F4D</attr>
+                <attr name="size">2</attr>
+                <attr name="val" encoding="bytes">8:0B0A</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">TLV (Context-specific)</attr>
+                <attr name="id">9F0A</attr>
+                <attr name="size">8</attr>
+                <attr name="val" encoding="bytes">8:0001050100000000</attr>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node>
+        <attr name="classname">block</attr>
+        <attr name="label">processing_options</attr>
+        <attr name="size">20</attr>
+        <attr name="val" encoding="bytes">8:771282023C00940C080101001001020018010201</attr>
+        <node>
+          <attr name="classname">item</attr>
+          <attr name="label">Response Message Template Format 2</attr>
+          <attr name="id">77</attr>
+          <attr name="size">18</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Interchange Profile (AIP)</attr>
+            <attr name="id">82</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:3C00</attr>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Application Function</attr>
+              <attr name="id">1.6</attr>
+              <attr name="val">DDA supported</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Application Function</attr>
+              <attr name="id">1.5</attr>
+              <attr name="val">Cardholder verification is supported</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Application Function</attr>
+              <attr name="id">1.4</attr>
+              <attr name="val">Terminal risk management is to be performed</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Application Function</attr>
+              <attr name="id">1.3</attr>
+              <attr name="val">Issuer authentication is supported</attr>
+            </node>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application File Locator (AFL)</attr>
+            <attr name="id">94</attr>
+            <attr name="size">12</attr>
+            <attr name="val" encoding="bytes">8:080101001001020018010201</attr>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Item</attr>
+              <attr name="id">1</attr>
+              <attr name="size">4</attr>
+              <attr name="val" encoding="bytes">8:08010100</attr>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Short File Identifier (SFI)</attr>
+                <attr name="id">88</attr>
+                <attr name="size">1</attr>
+                <attr name="val">1</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">First record</attr>
+                <attr name="size">1</attr>
+                <attr name="val">1</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Last record</attr>
+                <attr name="size">1</attr>
+                <attr name="val">1</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Number of records involved in offline data authentication</attr>
+                <attr name="size">1</attr>
+                <attr name="val">0</attr>
+              </node>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Item</attr>
+              <attr name="id">2</attr>
+              <attr name="size">4</attr>
+              <attr name="val" encoding="bytes">8:10010200</attr>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Short File Identifier (SFI)</attr>
+                <attr name="id">88</attr>
+                <attr name="size">1</attr>
+                <attr name="val">2</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">First record</attr>
+                <attr name="size">1</attr>
+                <attr name="val">1</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Last record</attr>
+                <attr name="size">1</attr>
+                <attr name="val">2</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Number of records involved in offline data authentication</attr>
+                <attr name="size">1</attr>
+                <attr name="val">0</attr>
+              </node>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Item</attr>
+              <attr name="id">3</attr>
+              <attr name="size">4</attr>
+              <attr name="val" encoding="bytes">8:18010201</attr>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Short File Identifier (SFI)</attr>
+                <attr name="id">88</attr>
+                <attr name="size">1</attr>
+                <attr name="val">3</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">First record</attr>
+                <attr name="size">1</attr>
+                <attr name="val">1</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Last record</attr>
+                <attr name="size">1</attr>
+                <attr name="val">2</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Number of records involved in offline data authentication</attr>
+                <attr name="size">1</attr>
+                <attr name="val">1</attr>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node>
+        <attr name="classname">block</attr>
+        <attr name="label">Application Transaction Counter (ATC)</attr>
+        <attr name="id">9F36</attr>
+        <attr name="size">2</attr>
+        <attr name="val" encoding="bytes">8:0050</attr>
+        <attr name="alt">80</attr>
+      </node>
+      <node>
+        <attr name="classname">block</attr>
+        <attr name="label">Last Online ATC Register</attr>
+        <attr name="id">9F13</attr>
+        <attr name="size">2</attr>
+        <attr name="val" encoding="bytes">8:0000</attr>
+        <attr name="alt">0</attr>
+      </node>
+      <node>
+        <attr name="classname">block</attr>
+        <attr name="label">PIN Try Counter</attr>
+        <attr name="id">9F17</attr>
+        <attr name="size">1</attr>
+        <attr name="val" encoding="bytes">8:05</attr>
+        <attr name="alt">5</attr>
+      </node>
+      <node>
+        <attr name="classname">block</attr>
+        <attr name="label">Log Format</attr>
+        <attr name="id">9F4F</attr>
+        <attr name="size">14</attr>
+        <attr name="val" encoding="bytes">8:9F27019F02065F2A029A039F3602</attr>
+        <attr name="alt">Cryptogram Information Data 9F27 [1]. Amount, Authorized 9F02 [6]. Currency code 5F2A [2]. Transaction Date 9A [3]. Application Transaction Counter (ATC) 9F36 [2]. </attr>
+      </node>
+      <node>
+        <attr name="classname">file</attr>
+        <attr name="label">file</attr>
+        <attr name="id">1</attr>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">1</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Data File (ADF)</attr>
+            <attr name="id">70</attr>
+            <attr name="size">77</attr>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Track 2 Equivalent Data</attr>
+              <attr name="id">57</attr>
+              <attr name="size">19</attr>
+              <attr name="val" encoding="bytes">8:4318711991399479D19112211994546200100F</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Cardholder Name</attr>
+              <attr name="id">5F20</attr>
+              <attr name="size">26</attr>
+              <attr name="val" encoding="bytes">8:434152442F532D452056495341204442204F4E4C204143502020</attr>
+              <attr name="alt">CARD/S-E VISA DB ONL ACP  </attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Track 1 Discretionary Data</attr>
+              <attr name="id">9F1F</attr>
+              <attr name="size">24</attr>
+              <attr name="val" encoding="bytes">8:313939343530303030303130303030343632303030303030</attr>
+              <attr name="alt">199450000010000462000000</attr>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node>
+        <attr name="classname">file</attr>
+        <attr name="label">file</attr>
+        <attr name="id">2</attr>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">1</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Data File (ADF)</attr>
+            <attr name="id">70</attr>
+            <attr name="size">190</attr>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">ICC Public Key Certificate</attr>
+              <attr name="id">9F46</attr>
+              <attr name="size">176</attr>
+              <attr name="val" encoding="bytes">8:ABD2B0CE96747E41E32AA471E72D07566D18E4DD249253E08A2D4E1E49DCD90D694CEEE4BE9559CF8BAA1D8788DB9C7E7E69F7656FB5F10E4005486DB2E26F994F3BF3895D9F6B139FBAE5BDDD5C33544C52537DD11F3C7CADBF0A81EE360BBE1CCB7C9732514F31E6E48E673DC1E7B534BCC3C0254ADD0E00629B7FBD1AE1BA913EC9443A76BC058EEF8D98648A54BA5949FCDA8AC4A96588BE36F8021B5C27F78DA8EC8B7F91EEC3B4C83E53AA0F13</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">ICC Public Key Exponent</attr>
+              <attr name="id">9F47</attr>
+              <attr name="size">1</attr>
+              <attr name="val" encoding="bytes">8:03</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Dynamic Data Authentication Data Object List (DDOL)</attr>
+              <attr name="id">9F49</attr>
+              <attr name="size">3</attr>
+              <attr name="val" encoding="bytes">8:9F3704</attr>
+              <attr name="alt">Unpredictable number 9F37 [4]. </attr>
+            </node>
+          </node>
+        </node>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">2</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Data File (ADF)</attr>
+            <attr name="id">70</attr>
+            <attr name="size">224</attr>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Certificate Authority Public Key Index (PKI)</attr>
+              <attr name="id">8F</attr>
+              <attr name="size">1</attr>
+              <attr name="val" encoding="bytes">8:92</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Issuer PK Certificate</attr>
+              <attr name="id">90</attr>
+              <attr name="size">176</attr>
+              <attr name="val" encoding="bytes">8:51C89D9406072E517FEE62333206C177B0AB90D8F9D59BCDBC2EBA29913C996C0CFE3905C59C0CF49365B301E7759C04EA21EA2B9DBE8358FE61996E8358A238AE8B32C6C640690FF64797BECB8192867763C9C4A35A100294DD81C73FA022D8BCC317D0786FFEDB4843EED6ECE82EE06D712E9CA96F7C79E4E550CD6A85DB57B607DFCDA3CAB7D98514A4E87B2B596BE621BD486A02E72A746FB95AD76A8D9CBBBB08B46BE811DC6A4908A2B949AFB9</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Issuer PK Remainder</attr>
+              <attr name="id">92</attr>
+              <attr name="size">36</attr>
+              <attr name="val" encoding="bytes">8:3FCD0CB13CD772692A316B0A3B8BF24DA8F08A54B8D8D6DAA564B5E26D6712F2D2727123</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Issuer PK Exponent</attr>
+              <attr name="id">9F32</attr>
+              <attr name="size">1</attr>
+              <attr name="val" encoding="bytes">8:03</attr>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node>
+        <attr name="classname">file</attr>
+        <attr name="label">file</attr>
+        <attr name="id">3</attr>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">1</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">AFL Information</attr>
+            <attr name="val">This record is to be included in offline data authentication</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Data File (ADF)</attr>
+            <attr name="id">70</attr>
+            <attr name="size">134</attr>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Application Effective Date</attr>
+              <attr name="id">5F25</attr>
+              <attr name="size">3</attr>
+              <attr name="val" encoding="bytes">8:161128</attr>
+              <attr name="alt">11/28/2016</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Application Expiration Date</attr>
+              <attr name="id">5F24</attr>
+              <attr name="size">3</attr>
+              <attr name="val" encoding="bytes">8:191130</attr>
+              <attr name="alt">11/30/2019</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Application PAN</attr>
+              <attr name="id">5A</attr>
+              <attr name="size">8</attr>
+              <attr name="val" encoding="bytes">8:4318711991399479</attr>
+              <attr name="alt">4318711991399479</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Application PAN Sequence Number</attr>
+              <attr name="id">5F34</attr>
+              <attr name="size">1</attr>
+              <attr name="val" encoding="bytes">8:01</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Application Usage Control</attr>
+              <attr name="id">9F07</attr>
+              <attr name="size">2</attr>
+              <attr name="val" encoding="bytes">8:FF80</attr>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Application Usage</attr>
+                <attr name="id">1.8</attr>
+                <attr name="val">Valid for domestic cash transactions</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Application Usage</attr>
+                <attr name="id">1.7</attr>
+                <attr name="val">Valid for international cash transactions</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Application Usage</attr>
+                <attr name="id">1.6</attr>
+                <attr name="val">Valid for domestic goods</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Application Usage</attr>
+                <attr name="id">1.5</attr>
+                <attr name="val">Valid for international goods</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Application Usage</attr>
+                <attr name="id">1.4</attr>
+                <attr name="val">Valid for domestic services</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Application Usage</attr>
+                <attr name="id">1.3</attr>
+                <attr name="val">Valid for international services</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Application Usage</attr>
+                <attr name="id">1.2</attr>
+                <attr name="val">Valid at ATMs</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Application Usage</attr>
+                <attr name="id">1.1</attr>
+                <attr name="val">Valid at terminals other than ATMs</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Application Usage</attr>
+                <attr name="id">2.8</attr>
+                <attr name="val">Domestic cashback allowed</attr>
+              </node>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Cardholder Verification Method (CVM) List</attr>
+              <attr name="id">8E</attr>
+              <attr name="size">20</attr>
+              <attr name="val" encoding="bytes">8:00000000000000004201440341031E0302031F03</attr>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">X</attr>
+                <attr name="size">4</attr>
+                <attr name="val" encoding="bytes">8:00000000</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Y</attr>
+                <attr name="size">4</attr>
+                <attr name="val" encoding="bytes">8:00000000</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">CVM</attr>
+                <attr name="id">1</attr>
+                <attr name="size">2</attr>
+                <attr name="val" encoding="bytes">8:4201</attr>
+                <attr name="alt">Apply succeeding CV rule if this rule is unsuccessful: Enciphered PIN verified online - If unattended cash</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">CVM</attr>
+                <attr name="id">2</attr>
+                <attr name="size">2</attr>
+                <attr name="val" encoding="bytes">8:4403</attr>
+                <attr name="alt">Apply succeeding CV rule if this rule is unsuccessful: Enciphered PIN verification performed by ICC - If terminal supports the CVM</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">CVM</attr>
+                <attr name="id">3</attr>
+                <attr name="size">2</attr>
+                <attr name="val" encoding="bytes">8:4103</attr>
+                <attr name="alt">Apply succeeding CV rule if this rule is unsuccessful: Plaintext PIN verification performed by ICC - If terminal supports the CVM</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">CVM</attr>
+                <attr name="id">4</attr>
+                <attr name="size">2</attr>
+                <attr name="val" encoding="bytes">8:1E03</attr>
+                <attr name="alt">Fail cardholder verification if this CVM is unsuccessful: Signature (paper) - If terminal supports the CVM</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">CVM</attr>
+                <attr name="id">5</attr>
+                <attr name="size">2</attr>
+                <attr name="val" encoding="bytes">8:0203</attr>
+                <attr name="alt">Fail cardholder verification if this CVM is unsuccessful: Enciphered PIN verified online - If terminal supports the CVM</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">CVM</attr>
+                <attr name="id">6</attr>
+                <attr name="size">2</attr>
+                <attr name="val" encoding="bytes">8:1F03</attr>
+                <attr name="alt">Fail cardholder verification if this CVM is unsuccessful: No CVM Required - If terminal supports the CVM</attr>
+              </node>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Issuer Action Code - Default</attr>
+              <attr name="id">9F0D</attr>
+              <attr name="size">5</attr>
+              <attr name="val" encoding="bytes">8:B840AC8800</attr>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">1.8</attr>
+                <attr name="val">Offline data authentication was not performed</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">1.6</attr>
+                <attr name="val">ICC data missing</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">1.5</attr>
+                <attr name="val">Card appears on terminal exception file</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">1.4</attr>
+                <attr name="val">DDA failed</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">2.7</attr>
+                <attr name="val">Expired application</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">3.8</attr>
+                <attr name="val">Cardholder verification was not successful</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">3.6</attr>
+                <attr name="val">PIN Try Limit exceeded</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">3.4</attr>
+                <attr name="val">PIN entry required, PIN pad present, but PIN was not entered</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">3.3</attr>
+                <attr name="val">Online PIN entered</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">4.8</attr>
+                <attr name="val">Transaction exceeds floor limit</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">4.4</attr>
+                <attr name="val">Merchant forced transaction online</attr>
+              </node>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Issuer Action Code - Denial</attr>
+              <attr name="id">9F0E</attr>
+              <attr name="size">5</attr>
+              <attr name="val" encoding="bytes">8:0010000000</attr>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">2.5</attr>
+                <attr name="val">Requested service not allowed for card product</attr>
+              </node>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Issuer Action Code - Online</attr>
+              <attr name="id">9F0F</attr>
+              <attr name="size">5</attr>
+              <attr name="val" encoding="bytes">8:B868BC9800</attr>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">1.8</attr>
+                <attr name="val">Offline data authentication was not performed</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">1.6</attr>
+                <attr name="val">ICC data missing</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">1.5</attr>
+                <attr name="val">Card appears on terminal exception file</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">1.4</attr>
+                <attr name="val">DDA failed</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">2.7</attr>
+                <attr name="val">Expired application</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">2.6</attr>
+                <attr name="val">Application not yet effective</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">2.4</attr>
+                <attr name="val">New card</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">3.8</attr>
+                <attr name="val">Cardholder verification was not successful</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">3.6</attr>
+                <attr name="val">PIN Try Limit exceeded</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">3.5</attr>
+                <attr name="val">PIN entry required and PIN pad not present or not working</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">3.4</attr>
+                <attr name="val">PIN entry required, PIN pad present, but PIN was not entered</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">3.3</attr>
+                <attr name="val">Online PIN entered</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">4.8</attr>
+                <attr name="val">Transaction exceeds floor limit</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">4.5</attr>
+                <attr name="val">Transaction selected randomly for online processing</attr>
+              </node>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">Condition</attr>
+                <attr name="id">4.4</attr>
+                <attr name="val">Merchant forced transaction online</attr>
+              </node>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Static Data Authentication Tag List</attr>
+              <attr name="id">9F4A</attr>
+              <attr name="size">1</attr>
+              <attr name="val" encoding="bytes">8:82</attr>
+              <attr name="alt">Application Interchange Profile (AIP) 82. </attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Card Risk Management Data Object List 1 (CDOL1)</attr>
+              <attr name="id">8C</attr>
+              <attr name="size">21</attr>
+              <attr name="val" encoding="bytes">8:9F02069F03069F1A0295055F2A029A039C019F3704</attr>
+              <attr name="alt">Amount, Authorized 9F02 [6]. Amount, Other 9F03 [6]. Terminal Country Code 9F1A [2]. Terminal Verification Results (TVR) 95 [5]. Currency code 5F2A [2]. Transaction Date 9A [3]. Transaction Type 9C [1]. Unpredictable number 9F37 [4]. </attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Card Risk Management Data Object List 2 (CDOL2)</attr>
+              <attr name="id">8D</attr>
+              <attr name="size">23</attr>
+              <attr name="val" encoding="bytes">8:8A029F02069F03069F1A0295055F2A029A039C019F3704</attr>
+              <attr name="alt">Authorisation Response Code 8A [2]. Amount, Authorized 9F02 [6]. Amount, Other 9F03 [6]. Terminal Country Code 9F1A [2]. Terminal Verification Results (TVR) 95 [5]. Currency code 5F2A [2]. Transaction Date 9A [3]. Transaction Type 9C [1]. Unpredictable number 9F37 [4]. </attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Country Code</attr>
+              <attr name="id">5F28</attr>
+              <attr name="size">2</attr>
+              <attr name="val" encoding="bytes">8:0246</attr>
+              <attr name="alt">Finland, Republic of</attr>
+            </node>
+          </node>
+        </node>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">2</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Data File (ADF)</attr>
+            <attr name="id">70</attr>
+            <attr name="size">14</attr>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Application Currency Code</attr>
+              <attr name="id">9F42</attr>
+              <attr name="size">2</attr>
+              <attr name="val" encoding="bytes">8:0978</attr>
+              <attr name="alt">Euro</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Application Currency Exponent</attr>
+              <attr name="id">9F44</attr>
+              <attr name="size">1</attr>
+              <attr name="val" encoding="bytes">8:02</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Application Version Number</attr>
+              <attr name="id">9F08</attr>
+              <attr name="size">2</attr>
+              <attr name="val" encoding="bytes">8:0096</attr>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node>
+        <attr name="classname">file</attr>
+        <attr name="label">log file</attr>
+        <attr name="id">11</attr>
+        <node>
+          <attr name="classname">block</attr>
+          <attr name="label">log format</attr>
+          <attr name="val" encoding="bytes">8:9F27019F02065F2A029A039F3602</attr>
+          <attr name="alt">9F27[1] 9F02[6] 5F2A[2] 9A[3] 9F36[2] </attr>
+        </node>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">1</attr>
+          <attr name="size">14</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Cryptogram Information Data</attr>
+            <attr name="size">1</attr>
+            <attr name="val" encoding="bytes">8:00</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Amount, Authorized</attr>
+            <attr name="size">6</attr>
+            <attr name="val" encoding="bytes">8:000000000001</attr>
+            <attr name="alt">0.01</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Currency code</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:0978</attr>
+            <attr name="alt">Euro</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Transaction Date</attr>
+            <attr name="size">3</attr>
+            <attr name="val" encoding="bytes">8:210909</attr>
+            <attr name="alt">09/09/2021</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Transaction Counter (ATC)</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:004B</attr>
+            <attr name="alt">75</attr>
+          </node>
+        </node>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">2</attr>
+          <attr name="size">14</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Cryptogram Information Data</attr>
+            <attr name="size">1</attr>
+            <attr name="val" encoding="bytes">8:00</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Amount, Authorized</attr>
+            <attr name="size">6</attr>
+            <attr name="val" encoding="bytes">8:000000000055</attr>
+            <attr name="alt">0.55</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Currency code</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:0978</attr>
+            <attr name="alt">Euro</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Transaction Date</attr>
+            <attr name="size">3</attr>
+            <attr name="val" encoding="bytes">8:210624</attr>
+            <attr name="alt">06/24/2021</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Transaction Counter (ATC)</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:004A</attr>
+            <attr name="alt">74</attr>
+          </node>
+        </node>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">3</attr>
+          <attr name="size">14</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Cryptogram Information Data</attr>
+            <attr name="size">1</attr>
+            <attr name="val" encoding="bytes">8:00</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Amount, Authorized</attr>
+            <attr name="size">6</attr>
+            <attr name="val" encoding="bytes">8:000000000011</attr>
+            <attr name="alt">0.11</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Currency code</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:0978</attr>
+            <attr name="alt">Euro</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Transaction Date</attr>
+            <attr name="size">3</attr>
+            <attr name="val" encoding="bytes">8:210624</attr>
+            <attr name="alt">06/24/2021</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Transaction Counter (ATC)</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:0049</attr>
+            <attr name="alt">73</attr>
+          </node>
+        </node>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">4</attr>
+          <attr name="size">14</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Cryptogram Information Data</attr>
+            <attr name="size">1</attr>
+            <attr name="val" encoding="bytes">8:00</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Amount, Authorized</attr>
+            <attr name="size">6</attr>
+            <attr name="val" encoding="bytes">8:000000000555</attr>
+            <attr name="alt">5.55</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Currency code</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:0978</attr>
+            <attr name="alt">Euro</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Transaction Date</attr>
+            <attr name="size">3</attr>
+            <attr name="val" encoding="bytes">8:210624</attr>
+            <attr name="alt">06/24/2021</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Transaction Counter (ATC)</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:0048</attr>
+            <attr name="alt">72</attr>
+          </node>
+        </node>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">5</attr>
+          <attr name="size">14</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Cryptogram Information Data</attr>
+            <attr name="size">1</attr>
+            <attr name="val" encoding="bytes">8:00</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Amount, Authorized</attr>
+            <attr name="size">6</attr>
+            <attr name="val" encoding="bytes">8:000000000001</attr>
+            <attr name="alt">0.01</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Currency code</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:0978</attr>
+            <attr name="alt">Euro</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Transaction Date</attr>
+            <attr name="size">3</attr>
+            <attr name="val" encoding="bytes">8:210624</attr>
+            <attr name="alt">06/24/2021</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Transaction Counter (ATC)</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:0047</attr>
+            <attr name="alt">71</attr>
+          </node>
+        </node>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">6</attr>
+          <attr name="size">14</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Cryptogram Information Data</attr>
+            <attr name="size">1</attr>
+            <attr name="val" encoding="bytes">8:00</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Amount, Authorized</attr>
+            <attr name="size">6</attr>
+            <attr name="val" encoding="bytes">8:000000000011</attr>
+            <attr name="alt">0.11</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Currency code</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:0978</attr>
+            <attr name="alt">Euro</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Transaction Date</attr>
+            <attr name="size">3</attr>
+            <attr name="val" encoding="bytes">8:210624</attr>
+            <attr name="alt">06/24/2021</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Transaction Counter (ATC)</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:0046</attr>
+            <attr name="alt">70</attr>
+          </node>
+        </node>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">7</attr>
+          <attr name="size">14</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Cryptogram Information Data</attr>
+            <attr name="size">1</attr>
+            <attr name="val" encoding="bytes">8:00</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Amount, Authorized</attr>
+            <attr name="size">6</attr>
+            <attr name="val" encoding="bytes">8:000000000001</attr>
+            <attr name="alt">0.01</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Currency code</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:0978</attr>
+            <attr name="alt">Euro</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Transaction Date</attr>
+            <attr name="size">3</attr>
+            <attr name="val" encoding="bytes">8:210624</attr>
+            <attr name="alt">06/24/2021</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Transaction Counter (ATC)</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:0045</attr>
+            <attr name="alt">69</attr>
+          </node>
+        </node>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">8</attr>
+          <attr name="size">14</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Cryptogram Information Data</attr>
+            <attr name="size">1</attr>
+            <attr name="val" encoding="bytes">8:00</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Amount, Authorized</attr>
+            <attr name="size">6</attr>
+            <attr name="val" encoding="bytes">8:000000000006</attr>
+            <attr name="alt">0.06</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Currency code</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:0978</attr>
+            <attr name="alt">Euro</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Transaction Date</attr>
+            <attr name="size">3</attr>
+            <attr name="val" encoding="bytes">8:210624</attr>
+            <attr name="alt">06/24/2021</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Transaction Counter (ATC)</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:0044</attr>
+            <attr name="alt">68</attr>
+          </node>
+        </node>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">9</attr>
+          <attr name="size">14</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Cryptogram Information Data</attr>
+            <attr name="size">1</attr>
+            <attr name="val" encoding="bytes">8:00</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Amount, Authorized</attr>
+            <attr name="size">6</attr>
+            <attr name="val" encoding="bytes">8:000000000123</attr>
+            <attr name="alt">1.23</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Currency code</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:0978</attr>
+            <attr name="alt">Euro</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Transaction Date</attr>
+            <attr name="size">3</attr>
+            <attr name="val" encoding="bytes">8:210219</attr>
+            <attr name="alt">02/19/2021</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Transaction Counter (ATC)</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:003F</attr>
+            <attr name="alt">63</attr>
+          </node>
+        </node>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">10</attr>
+          <attr name="size">14</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Cryptogram Information Data</attr>
+            <attr name="size">1</attr>
+            <attr name="val" encoding="bytes">8:00</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Amount, Authorized</attr>
+            <attr name="size">6</attr>
+            <attr name="val" encoding="bytes">8:000000003000</attr>
+            <attr name="alt">30.00</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Currency code</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:0978</attr>
+            <attr name="alt">Euro</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Transaction Date</attr>
+            <attr name="size">3</attr>
+            <attr name="val" encoding="bytes">8:200116</attr>
+            <attr name="alt">01/16/2020</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Transaction Counter (ATC)</attr>
+            <attr name="size">2</attr>
+            <attr name="val" encoding="bytes">8:003E</attr>
+            <attr name="alt">62</attr>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node>
+      <attr name="classname">application</attr>
+      <attr name="label">application</attr>
+      <attr name="id">#A0000003790000</attr>
+      <node>
+        <attr name="classname">header</attr>
+        <attr name="label">answer to select</attr>
+        <attr name="size">33</attr>
+        <attr name="val" encoding="bytes">8:6F1F8407A0000003790000A5145005424F4E55539F38039F1A02BF0C04DF650102</attr>
+        <node>
+          <attr name="classname">item</attr>
+          <attr name="label">File Control Information (FCI) Template</attr>
+          <attr name="id">6F</attr>
+          <attr name="size">31</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Dedicated File (DF) Name</attr>
+            <attr name="id">84</attr>
+            <attr name="size">7</attr>
+            <attr name="val" encoding="bytes">8:A0000003790000</attr>
+            <attr name="alt">\240\000\000\003y\000\000 (A0000003790000)</attr>
+          </node>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">FCI Proprietary Template</attr>
+            <attr name="id">A5</attr>
+            <attr name="size">20</attr>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Application Label</attr>
+              <attr name="id">50</attr>
+              <attr name="size">5</attr>
+              <attr name="val" encoding="bytes">8:424F4E5553</attr>
+              <attr name="alt">BONUS</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">Processing Options Data Object List (PDOL)</attr>
+              <attr name="id">9F38</attr>
+              <attr name="size">3</attr>
+              <attr name="val" encoding="bytes">8:9F1A02</attr>
+              <attr name="alt">Terminal Country Code 9F1A [2]. </attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">FCI Issuer Discretionary Data</attr>
+              <attr name="id">BF0C</attr>
+              <attr name="size">4</attr>
+              <node>
+                <attr name="classname">item</attr>
+                <attr name="label">TLV (Private)</attr>
+                <attr name="id">DF65</attr>
+                <attr name="size">1</attr>
+                <attr name="val" encoding="bytes">8:02</attr>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node>
+        <attr name="classname">file</attr>
+        <attr name="label">file</attr>
+        <attr name="id">1</attr>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">1</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Data File (ADF)</attr>
+            <attr name="id">70</attr>
+            <attr name="size">12</attr>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">TLV (Private)</attr>
+              <attr name="id">DF66</attr>
+              <attr name="size">9</attr>
+              <attr name="val" encoding="bytes">8:60040706224950442F</attr>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node>
+        <attr name="classname">file</attr>
+        <attr name="label">file</attr>
+        <attr name="id">2</attr>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">1</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Data File (ADF)</attr>
+            <attr name="id">70</attr>
+            <attr name="size">10</attr>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">TLV (Private)</attr>
+              <attr name="id">DF70</attr>
+              <attr name="size">1</attr>
+              <attr name="val" encoding="bytes">8:00</attr>
+            </node>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">TLV (Private)</attr>
+              <attr name="id">DF71</attr>
+              <attr name="size">3</attr>
+              <attr name="val" encoding="bytes">8:991231</attr>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node>
+        <attr name="classname">file</attr>
+        <attr name="label">file</attr>
+        <attr name="id">3</attr>
+        <node>
+          <attr name="classname">record</attr>
+          <attr name="label">record</attr>
+          <attr name="id">1</attr>
+          <node>
+            <attr name="classname">item</attr>
+            <attr name="label">Application Data File (ADF)</attr>
+            <attr name="id">70</attr>
+            <attr name="size">23</attr>
+            <node>
+              <attr name="classname">item</attr>
+              <attr name="label">TLV (Private)</attr>
+              <attr name="id">DF74</attr>
+              <attr name="size">20</attr>
+              <attr name="val" encoding="bytes">8:0000000000000000000000000000000000000000</attr>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node>
+      <attr name="classname">block</attr>
+      <attr name="label">cpcl data</attr>
+      <attr name="id">9F7F</attr>
+      <attr name="size">42</attr>
+      <attr name="val" encoding="bytes">8:409077941981220201004143002DC5DF043C129241431293414312944143000000202005634400000003</attr>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">IC Fabricator</attr>
+        <attr name="id">0</attr>
+        <attr name="val" encoding="bytes">8:4090</attr>
+      </node>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">IC Type</attr>
+        <attr name="id">2</attr>
+        <attr name="val" encoding="bytes">8:7794</attr>
+      </node>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">Operating System Provider Identifier</attr>
+        <attr name="id">4</attr>
+        <attr name="val" encoding="bytes">8:1981</attr>
+      </node>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">Operating System Release Date</attr>
+        <attr name="id">6</attr>
+        <attr name="val" encoding="bytes">8:2202</attr>
+        <attr name="alt">???2-07-21 or ???2-07-20</attr>
+      </node>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">Operating System Release Level</attr>
+        <attr name="id">8</attr>
+        <attr name="val" encoding="bytes">8:0100</attr>
+      </node>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">IC Fabrication Date</attr>
+        <attr name="id">10</attr>
+        <attr name="val" encoding="bytes">8:4143</attr>
+        <attr name="alt">???4-05-23 or ???4-05-22</attr>
+      </node>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">IC Serial Number</attr>
+        <attr name="id">12</attr>
+        <attr name="val" encoding="bytes">8:002DC5DF</attr>
+      </node>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">IC Batch Identifier</attr>
+        <attr name="id">16</attr>
+        <attr name="val" encoding="bytes">8:043C</attr>
+      </node>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">IC ModuleFabricator</attr>
+        <attr name="id">18</attr>
+        <attr name="val" encoding="bytes">8:1292</attr>
+      </node>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">IC ModulePackaging Date</attr>
+        <attr name="id">20</attr>
+        <attr name="val" encoding="bytes">8:4143</attr>
+        <attr name="alt">???4-05-23 or ???4-05-22</attr>
+      </node>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">ICC Manufacturer</attr>
+        <attr name="id">22</attr>
+        <attr name="val" encoding="bytes">8:1293</attr>
+      </node>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">IC Embedding Date</attr>
+        <attr name="id">24</attr>
+        <attr name="val" encoding="bytes">8:4143</attr>
+        <attr name="alt">???4-05-23 or ???4-05-22</attr>
+      </node>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">Prepersonalizer Identifier</attr>
+        <attr name="id">26</attr>
+        <attr name="val" encoding="bytes">8:1294</attr>
+      </node>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">Prepersonalization Date</attr>
+        <attr name="id">28</attr>
+        <attr name="val" encoding="bytes">8:4143</attr>
+        <attr name="alt">???4-05-23 or ???4-05-22</attr>
+      </node>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">Prepersonalization Equipment</attr>
+        <attr name="id">30</attr>
+        <attr name="val" encoding="bytes">8:00000020</attr>
+      </node>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">Personalizer Identifier</attr>
+        <attr name="id">34</attr>
+        <attr name="val" encoding="bytes">8:2005</attr>
+      </node>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">Personalization Date</attr>
+        <attr name="id">36</attr>
+        <attr name="val" encoding="bytes">8:6344</attr>
+        <attr name="alt">???6-12-10 or ???6-12-09</attr>
+      </node>
+      <node>
+        <attr name="classname">item</attr>
+        <attr name="label">Personalization Equipment</attr>
+        <attr name="id">38</attr>
+        <attr name="val" encoding="bytes">8:00000003</attr>
+      </node>
+    </node>
+  </node>
+</cardpeek>
