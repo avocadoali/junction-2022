@@ -10,7 +10,6 @@ def calcSFI(n):
 
 
 def identifyCountry(num):
-    num = 5
     countries = {
         246: "The Republic of Finland",
         276: "Germany",
@@ -86,7 +85,14 @@ def cardDemo():
         "expirationDate": 0,
         "currency": "",
         "country": "",
-        "log": []
+        "log": [],
+        "name_raw": "",
+        "number_raw": 0,
+        "effectiveDate_raw": 0,
+        "expirationDate_raw": 0,
+        "currency_raw": "",
+        "country_raw": "",
+
     }
     SELECT = toBytes("00A40400")
     APP = toBytes("07")
@@ -131,11 +137,16 @@ def cardDemo():
                     if sw1 == 144 and sw2 == 0:  # read was successful
                         card += data
 
-            number = toHexString(findDataOfLen("0x57", card, 8)).split()  # card number
+            NUMBER = "0x57"
+            raw_number = findDataOfLen(NUMBER, card, 8)
+            number = toHexString(raw_number).split()  # card number
+            out["number_raw"] = NUMBER + ": " + toHexString(raw_number)
             out["number"] = number[0] + number[1] + " " + number[2] + number[3] + " " + number[4] + number[5] + " " + \
                             number[6] + number[7]
 
-            nameBytes = findData2("0x5F20", card)  # card hoder name
+            NAME = "0x5F20"
+            nameBytes = findData2(NAME, card)  # card hoder name
+            out["name_raw"] = NAME + ": " + toHexString(nameBytes)
 
             name = ""
             for i in nameBytes:
@@ -143,22 +154,31 @@ def cardDemo():
             out["name"] = name
 
             # read date of issue and expiration date
-
-            date = toDateString(findData2("0x5F25", card))  # date of issue
+            ISSUEDATE = "0x5F25"
+            raw_date = findData2(ISSUEDATE, card)
+            date = toDateString(raw_date)  # date of issue
+            out["effectiveDate_raw"] = ISSUEDATE + ": " + toHexString(raw_date)
             out["effectiveDate"] = date
 
-            date = toDateString(findData2("0x5F24", card))  # expiration date
+            EXPDATE = "0x5F24"
+            raw_date = findData2(EXPDATE, card)
+            date = toDateString(raw_date)  # expiration date
+            out["expirationDate_raw"] = EXPDATE + ": " + toHexString(raw_date)
             out["expirationDate"] = date
 
             # read the country code
 
-            countryBytes = toHexString(findData2("0x5F28", card)).split()
+            COUNTRY = "0x5F28"
+            countryBytes = toHexString(findData2(COUNTRY, card)).split()
             countryCode = countryBytes[0] + countryBytes[1]
+            out["country_raw"] = COUNTRY + ": " + countryCode
             out["country"] = identifyCountry(countryCode)  # issuing country
 
             # read the default currency
 
-            currencyCode = toHexString(findData2("0x9F42", card)).split()
+            CURRENCY = "0x9F42"
+            currencyCode = toHexString(findData2(CURRENCY, card)).split()
+            out["currency_raw"] = CURRENCY + ": " + currencyCode[0] + currencyCode[1]
             out["currency"] = identifyCurrency(currencyCode[0] + currencyCode[1])
 
             # read payment log
