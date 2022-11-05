@@ -1,0 +1,63 @@
+{%extends "base.html"%} {%block content%}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container-fluid" data-aos="fade-up">
+      <div class="row justify-content-center">
+        <div class="col-xl-3 col-lg-6 order-2 order-lg-1 align-items-center">
+              <div class="card bg-transparent shadow-xl">
+                <div class="overflow-hidden position-relative border-radius-xl" style="background-image: url('../static/assets/img/curved14.jpg');">
+                  <span class="mask bg-gradient-dark"></span>
+                  <div class="card-body position-relative z-index-1 p-3">
+                    <i class="fas fa-wifi text-white p-2"></i>
+                      <span class="d-inline-block" tabindex="0" data-bs-toggle="popover"    data-bs-placement="top" data-bs-trigger="hover focus" title="Card Number"
+                      data-bs-content="Something about the card number">
+                          <h5 class="text-white mt-4 mb-5 pb-2">{{data_list["number"]}}</h5>
+                    </span>
+                    <div class="d-flex">
+                      <div class="d-flex">
+                        <div class="me-4">
+
+                          <p class="text-white text-sm opacity-8 mb-0">Card Holder</p>
+                          <span class="d-inline-block" title = "Card Holder" tabindex="0" data-bs-toggle="popover"  data-bs-placement="top" data-bs-trigger="hover focus" data-bs-content="Something about the Cardholder ">
+                            <h6 class="text-white mb-0">{{data_list["name"]}}</h6>
+                          </span>
+
+                        </div>
+                        <div>
+                          <p class="text-white text-sm opacity-8 mb-0">Expires</p>
+                          <span class="d-inline-block" tabindex="0" data-bs-toggle="popover"    data-bs-placement="top" data-bs-trigger="hover focus" title="Expiration date"
+                              data-bs-content="Something about the expiration datSomething about the expiration datSomething about the expiration datSomething about the expiration dateeeeSomething about the expiration date">
+                            <h6 class="text-white mb-0">{{data_list["expirationDate"]}}</h6>
+                          </span>
+
+                        </div>
+                      </div>
+                      <div class="ms-auto w-20 d-flex align-items-end justify-content-end">
+                        <img class="w-60 mt-2" src={{card_link}} alt="logo">
+                      </div>
+                    </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+        <div class="col-xl-4 col-lg-6 pt-3 pt-lg-1 order-2 order-lg-1 d-flex flex-column align-items-center">
+          <h1>Your card</h1>
+          <div><a href="log" class="btn-get-started scrollto">See what's inside</a></div>
+        </div>
+
+
+
+
+
+
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+{%endblock%}
