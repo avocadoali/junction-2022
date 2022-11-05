@@ -1,5 +1,5 @@
 # Junction 2022 - Nexi Challenge - Crack the Payments
-Project by: 2 Coders 1 Card
+### Project by: 2 Coders 1 Card
 
 ## The Result
 We managed to access the cards internal filesystem, read it and interpret most of its contents. As demonstration we wrote a tool, which allows you to read any Visa or Master card through a smartcard reader and display the contents of the card. We show the user the most interesting pieces of information and for each give a brief explanation why it is potentially harmful that this information can be accessed without any serious encryption.
