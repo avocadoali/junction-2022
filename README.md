@@ -45,3 +45,4 @@ We used Visa cards for the Demonstration, but MasterCard work the some way with 
 
 ## About the Implementation
 - the main backend and card reading is implemented in PresentationBackend.py
+- parseATR.py and smartcard_list.txt are open source ressources created by: https://github.com/LudovicRousseau
