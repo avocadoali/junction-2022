@@ -2,7 +2,7 @@ from smartcard.Exceptions import NoCardException
 from smartcard.pcsc.PCSCReader import *
 from smartcard.util import toBytes
 
-from parseATR import toHexString
+from parseATR import *
 
 
 def calcSFI(n):
@@ -106,6 +106,22 @@ def cardDemo():
             # ATR
             atr = toHexString(connection.getATR())
             print(atr)
+
+            ATR = parseATR(atr)
+            text = atr_display_txt(ATR)
+            # print(text)
+            match = match_atr_differentiated(atr, "smartcard_list.txt")
+            if match:
+                out["atr"]["atrFlag"] = "possible matched card"
+                out["atr"]["atrID"] = match
+
+            else:
+                out["atr"]["atrFlag"] = "unknown card"
+                out["atr"]["atrID"] = []
+
+
+
+
             out["atr"]["atr"] = atr
 
             # select Master File
@@ -150,7 +166,7 @@ def cardDemo():
             ISSUEDATE = "0x5F25"
             raw_date = findData2(ISSUEDATE, card)
             date = toDateString(raw_date)  # date of issue
-            out["effectiveDate"] = [ISSUEDATE + ": " + toHexString(raw_date),date]
+            out["effectiveDate"] = [ISSUEDATE + ": " + toHexString(raw_date), date]
 
             EXPDATE = "0x5F24"
             raw_date = findData2(EXPDATE, card)
@@ -162,13 +178,14 @@ def cardDemo():
             COUNTRY = "0x5F28"
             countryBytes = toHexString(findData2(COUNTRY, card)).split()
             countryCode = countryBytes[0] + countryBytes[1]
-            out["country"] =  [COUNTRY + ": " + countryCode, identifyCountry(countryCode)] # issuing country
+            out["country"] = [COUNTRY + ": " + countryCode, identifyCountry(countryCode)]  # issuing country
 
             # read the default currency
 
             CURRENCY = "0x9F42"
             currencyCode = toHexString(findData2(CURRENCY, card)).split()
-            out["currency"] = [CURRENCY + ": " + currencyCode[0] + currencyCode[1], identifyCurrency(currencyCode[0] + currencyCode[1])]
+            out["currency"] = [CURRENCY + ": " + currencyCode[0] + currencyCode[1],
+                               identifyCurrency(currencyCode[0] + currencyCode[1])]
 
             # read payment log
             # only works on visa debit
