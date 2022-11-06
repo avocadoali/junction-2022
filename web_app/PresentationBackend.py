@@ -11,10 +11,10 @@ def calcSFI(n):
 
 def identifyCountry(num):
     countries = {
-        246: "The Republic of Finland",
-        276: "Germany",
-        840: "United States of America",
-        826: "United Kingdom of Great Britain and Northern Ireland"
+        "0246": "The Republic of Finland",
+        "076": "Germany",
+        "0840": "United States of America",
+        "0826": "United Kingdom of Great Britain and Northern Ireland"
     }
 
     if num in countries:
@@ -204,7 +204,3 @@ def cardDemo():
 
         except NoCardException:
             print("!>> no Card inserted\n")
-
-
-res = cardDemo()
-print(res)
