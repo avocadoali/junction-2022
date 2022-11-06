@@ -10,8 +10,14 @@
                   <span class="mask bg-gradient-dark"></span>
                   <div class="card-body position-relative z-index-1 p-3">
                     <i class="fas fa-wifi text-white p-2"></i>
-                      <span class="d-inline-block" tabindex="0" data-bs-toggle="popover"    data-bs-placement="top" data-bs-trigger="hover focus" title="Card Number"
-                      data-bs-content="Something about the card number">
+
+
+
+
+
+
+ <span class="d-inline-block" tabindex="0" data-bs-toggle="popover"    data-bs-placement="top" data-bs-trigger="hover focus" title="Card Number"
+                      data-bs-content="The card number, is the identifier of the card. It is primarily a card identifier and  may not directly identify the bank account number/s to which the card is/are linked by the issuing entity.">
                           <h5 class="text-white mt-4 mb-5 pb-2">{{data_list["number"][1]}}</h5>
                     </span>
                     <div class="d-flex">
@@ -19,7 +25,7 @@
                         <div class="me-4">
 
                           <p class="text-white text-sm opacity-8 mb-0">Card Holder</p>
-                          <span class="d-inline-block" title = "Card Holder" tabindex="0" data-bs-toggle="popover"  data-bs-placement="top" data-bs-trigger="hover focus" data-bs-content="Something about the Cardholder ">
+                          <span class="d-inline-block" title = "Card Holder" tabindex="0" data-bs-toggle="popover"  data-bs-placement="top" data-bs-trigger="hover focus" data-bs-content="The card holder name is an one part to make transactions possible. Even without physically seeing the card, fraudsters can read the cardholder with contactless connection.">
                             <h6 class="text-white mb-0">{{data_list["name"][1]}}</h6>
                           </span>
 
@@ -27,9 +33,11 @@
                         <div>
                           <p class="text-white text-sm opacity-8 mb-0">Expires</p>
                           <span class="d-inline-block" tabindex="0" data-bs-toggle="popover"    data-bs-placement="top" data-bs-trigger="hover focus" title="Expiration date"
-                              data-bs-content="Something about the expiration datSomething about the expiration datSomething about the expiration datSomething about the expiration dateeeeSomething about the expiration date">
+                              data-bs-content="Finally, the expiration date is the last information written on the card which can be determined without actually looking on the card. Now, the only thing for performing a transaction is the CVV on the back of the card. Fortunately, the CVV is not readable through contactless connection, but there are ways to perform transactions without knowing the CVV ">
                             <h6 class="text-white mb-0">{{data_list["expirationDate"][1]}}</h6>
                           </span>
+
+                    
 
                         </div>
                       </div>
