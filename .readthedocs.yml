@@ -1,0 +1,5 @@
+build:
+  apt_packages:
+    - swig
+	- pcscd
+	- libpcsclite-dev

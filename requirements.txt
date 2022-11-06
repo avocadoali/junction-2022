@@ -5,6 +5,7 @@ click==8.0.4
 dparse==0.6.2
 Flask==2.0.3
 Flask-Cors==3.0.10
+gunicorn==20.1.0
 itsdangerous==2.1.1
 Jinja2==3.0.3
 MarkupSafe==2.1.1
@@ -13,7 +14,6 @@ persistent==4.9.2
 pycodestyle==2.9.1
 pycparser==2.21
 pyparsing==3.0.9
-pyscard==2.0.5
 six==1.16.0
 smartcard==0.3
 swig==4.1.0
