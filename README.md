@@ -47,6 +47,6 @@ We think payment data is highly sensetive data and should never be transmitted w
 Concerning the backlog of the transaction history the same holds, it is irresponsible to keep them lying around unencrypted. We are not sure why they are even stored at all, because each payment terminal will communicate with the banking network anyways but if they are necessary, at least keep them encrypted!
 
 
-We used Visa cards for the Demonstration, but MasterCard work the some way with some minor differences in the filesystem.
+We used Visa cards for the Demonstration, but MasterCard work the some way with some minor differences in the filesystem. One key differnce is that some cards will not save the transaction history. We found a list of recent payments on VisaDebit and some MasterCards.
 
 
