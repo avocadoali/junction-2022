@@ -1,6 +1,12 @@
 # Junction 2022 - Nexi Challenge - Crack the Payments
 ### Project by: 2 Coders 1 Card
 
+## About the Implementation
+- the main backend and card reading is implemented in PresentationBackend.py
+- parseATR.py and smartcard_list.txt are open source ressources created by: https://github.com/LudovicRousseau
+- there is a demo running at: https://junction-2022.herokuapp.com/
+
+
 ## The Result
 We managed to access the cards internal filesystem, read it and interpret most of its contents. As demonstration we wrote a tool, which allows you to read any Visa card through a smartcard reader and display selected contents of the card. We show the user the most interesting pieces of information and give a brief explanation why it is potentially harmful information.
 
@@ -43,6 +49,4 @@ Concerning the backlog of the transaction history the same holds, it is irrespon
 
 We used Visa cards for the Demonstration, but MasterCard work the some way with some minor differences in the filesystem.
 
-## About the Implementation
-- the main backend and card reading is implemented in PresentationBackend.py
-- parseATR.py and smartcard_list.txt are open source ressources created by: https://github.com/LudovicRousseau
+
