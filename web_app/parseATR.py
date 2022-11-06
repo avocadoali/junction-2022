@@ -1511,7 +1511,7 @@ def match_atr_differentiated(atr, atr_file=None):
             except:
                 pass
     else:
-        file = open(atr_file)
+        file = open(atr_file, encoding="utf-8")
 
     # find a . * or [ in the ATR to know if we must use a RE or not
     re_match = re.compile("[\\.\\*\\[]")
