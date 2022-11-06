@@ -42,3 +42,5 @@ Concerning the backlog of the transaction history the same holds, it is irrespon
 
 We used Visa cards for the Demonstration, but MasterCard work the some way with some minor differences in the filesystem.
 
+## About the Implementation
+- the main backend is implemented in web_app/PresentationBackend.py
