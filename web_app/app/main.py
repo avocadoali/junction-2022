@@ -29,6 +29,7 @@ def cardpage():
     else:
         print("carDemo")
         session["data"]= cardDemo()
+        data = session["data"]
 
     card_logo = "../static/assets/img/visacard.png"
 
