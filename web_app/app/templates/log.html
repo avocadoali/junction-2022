@@ -3,6 +3,8 @@
   <section id="hero" class="d-flex align-items-center">
 
     <div class="container-fluid" data-aos="fade-up">
+
+
   <div class="row justify-content-center">
         <div class="col-xl-6 align-items-center">
          <div class="card h-100">
@@ -54,6 +56,25 @@
                     </tr>
                   </thead>
 
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="align-middle column justify-content-center">
+                            <h6 class="mb-0 text-sm">ATR</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-secondary text-xs font-weight-bold">{{data_at["atr"]}}</span>
+                      </td>
+
+                      <td class="align-middle text-center">
+                        <span class="badge badge-sm bg-gradient-secondary">{{data_at["atrID"][data_at["atr"]][0]}}</span>
+                      </td>
+                    </tr>
+              </tbody>
 
 
                 {%for entry in data_list%}
